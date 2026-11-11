@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CARPRINT Pleos</string>
+    <string name="environment_notice">Pleos 에뮬레이터 · 실차 미검증\n차량 제어 없음</string>
+</resources>

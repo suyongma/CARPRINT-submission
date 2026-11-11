@@ -1,0 +1,24 @@
+{
+  "full": {
+    "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+    "kind": "full",
+    "scope": {
+      "from": "2026-04-30T03:00:00Z",
+      "to": "2026-10-27T03:00:00Z",
+      "selected_event_ids": []
+    },
+    "expires_in": 3600
+  },
+  "partial": {
+    "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+    "kind": "partial",
+    "scope": {
+      "from": "2026-04-30T03:00:00Z",
+      "to": "2026-10-27T03:00:00Z",
+      "selected_event_ids": [
+        "938e7d22-44c1-5d16-8d9c-126a36721d42"
+      ]
+    },
+    "expires_in": 3600
+  }
+}

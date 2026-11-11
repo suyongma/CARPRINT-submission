@@ -1,0 +1,38 @@
+{
+  "name": "carprint-backend",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22 <27"
+  },
+  "scripts": {
+    "dev": "node --env-file=.env --import tsx src/server.ts",
+    "check": "tsc --noEmit",
+    "test": "node --env-file=.env --import tsx --test --test-concurrency=1 test/*.test.ts",
+    "migrate": "node --env-file=.env --import tsx scripts/migrate.ts",
+    "seed": "node --env-file=.env --import tsx scripts/seed.ts",
+    "format": "prettier --write \"{src,scripts,test}/**/*.{ts,mjs,js,html,css}\"",
+    "format:check": "prettier --check \"{src,scripts,test}/**/*.{ts,mjs,js,html,css}\"",
+    "demo:report": "node --env-file=.env --import tsx scripts/demo-report.ts",
+    "browser:review": "node --env-file=.env --import tsx scripts/browser-review.ts",
+    "demo:contexts": "node --env-file=.env --import tsx scripts/demo-contexts.ts",
+    "seed:experience": "node --env-file=.env --import tsx scripts/seed-experience.ts"
+  },
+  "dependencies": {
+    "@fastify/cookie": "11.1.5",
+    "@fastify/rate-limit": "11.2.1",
+    "canonicalize": "5.1.0",
+    "fastify": "5.12.7",
+    "pg": "8.23.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261102.1",
+    "@types/node": "26.6.5",
+    "@types/pg": "8.23.1",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "wrangler": "4.151.2"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "event_id": "ce66e7f0-8bcb-5d41-abbb-1d69358dda38",
+  "event_type": "odometer.observed",
+  "occurred_at": null,
+  "observed_at": "2026-10-27T03:00:00Z",
+  "payload_version": 1,
+  "payload": {
+    "value": 42510,
+    "unit": "km",
+    "time_quality": "client_observed"
+  },
+  "source_ref": "ae826706-796f-557a-928b-33177bb19cc4",
+  "environment": "simulation",
+  "collection_scope": [
+    "odometer"
+  ],
+  "source_signature": null
+}

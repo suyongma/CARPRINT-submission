@@ -1,0 +1,217 @@
+{
+  "notice": "합성 계정 A의 두 차량 누적 예제. B는 평가 전 50점. 실제 차량 기록과 연결하지 않는다.",
+  "observations": [
+    {
+      "observationId": "demo-person-a-trip-01",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-a",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-10T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 2
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-02",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-b",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-11T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 0
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-03",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-a",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-12T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 0
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-04",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-b",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-13T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 2
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-05",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-a",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-14T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 0
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-06",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-b",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-15T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 0
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-07",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-a",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-16T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 2
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-08",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-b",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-17T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 0
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-09",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-a",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-18T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 0
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-10",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-b",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-19T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 2
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-11",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-a",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-20T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 0
+      }
+    },
+    {
+      "observationId": "demo-person-a-trip-12",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-b",
+      "category": "driving",
+      "responsibility": "driver",
+      "occurredAt": "2026-10-21T10:00:00Z",
+      "metrics": {
+        "distanceKm": 50,
+        "observedMinutes": 60,
+        "harshEvents": 0
+      }
+    },
+    {
+      "observationId": "demo-person-a-care-01",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-a",
+      "category": "care",
+      "responsibility": "care_responsible",
+      "occurredAt": "2026-10-10T10:00:00Z",
+      "metrics": {
+        "dueAt": "2026-10-10T10:00:00Z",
+        "completedAt": "2026-10-10T10:00:00Z",
+        "observedThrough": "2026-10-10T10:00:00Z",
+        "graceDays": 7
+      }
+    },
+    {
+      "observationId": "demo-person-a-care-02",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-b",
+      "category": "care",
+      "responsibility": "care_responsible",
+      "occurredAt": "2026-10-11T10:00:00Z",
+      "metrics": {
+        "dueAt": "2026-10-11T10:00:00Z",
+        "completedAt": "2026-10-11T10:00:00Z",
+        "observedThrough": "2026-10-11T10:00:00Z",
+        "graceDays": 7
+      }
+    },
+    {
+      "observationId": "demo-person-a-care-03",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-a",
+      "category": "care",
+      "responsibility": "care_responsible",
+      "occurredAt": "2026-10-12T10:00:00Z",
+      "metrics": {
+        "dueAt": "2026-10-12T10:00:00Z",
+        "completedAt": "2026-10-12T10:00:00Z",
+        "observedThrough": "2026-10-12T10:00:00Z",
+        "graceDays": 7
+      }
+    },
+    {
+      "observationId": "demo-person-a-care-04",
+      "accountId": "demo-a",
+      "vehicleAlias": "demo-vehicle-b",
+      "category": "care",
+      "responsibility": "care_responsible",
+      "occurredAt": "2026-10-13T10:00:00Z",
+      "metrics": {
+        "dueAt": "2026-10-13T10:00:00Z",
+        "completedAt": "2026-10-13T10:00:00Z",
+        "observedThrough": "2026-10-13T10:00:00Z",
+        "graceDays": 7
+      }
+    }
+  ]
+}

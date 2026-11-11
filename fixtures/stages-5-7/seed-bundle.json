@@ -1,0 +1,425 @@
+{
+  "status": "prepared_not_loaded",
+  "fixture_clock": "2026-10-27T03:00:00Z",
+  "vehicles": [
+    {
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "alias": "데모 차량 A",
+      "environment": "simulation",
+      "identity_level": "demo_vehicle_binding"
+    },
+    {
+      "vehicle_ref": "3a853f31-a341-5ff2-a45d-94e47fe85c20",
+      "alias": "격리 확인용 차량 B",
+      "environment": "simulation",
+      "identity_level": "demo_vehicle_binding"
+    },
+    {
+      "vehicle_ref": "b278f1b3-4a23-5b9b-b4d9-1ac4b84ccd27",
+      "alias": "Pleos 에뮬레이터 전용",
+      "environment": "pleos_emulator",
+      "identity_level": "demo_vehicle_binding"
+    }
+  ],
+  "principals": [
+    {
+      "principal_id": "c499be53-1f85-51ed-8854-cc1655e7b4a4",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "role": "vehicle_collector",
+      "scopes": [
+        "events:append:odometer",
+        "timeline:read"
+      ],
+      "binding_method": "demo_vehicle_binding",
+      "credential": null
+    },
+    {
+      "principal_id": "6e3a73fb-2a79-59c6-803b-b10c86f4098b",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "role": "report_manager",
+      "scopes": [
+        "timeline:read",
+        "reports:create",
+        "reports:read",
+        "reports:revoke"
+      ],
+      "binding_method": "demo_vehicle_binding",
+      "credential": null
+    },
+    {
+      "principal_id": "a9c11b9c-0039-5bee-a6a9-7919c0a14ff7",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "role": "maintenance_issuer",
+      "scopes": [
+        "events:append:maintenance",
+        "events:correct:own"
+      ],
+      "binding_method": "demo_vehicle_binding",
+      "credential": null
+    },
+    {
+      "principal_id": "da068d97-c257-5d39-801a-5b1fbbfbcd01",
+      "vehicle_ref": "3a853f31-a341-5ff2-a45d-94e47fe85c20",
+      "role": "vehicle_collector",
+      "scopes": [
+        "events:append:odometer",
+        "timeline:read"
+      ],
+      "binding_method": "demo_vehicle_binding",
+      "credential": null
+    },
+    {
+      "principal_id": "ed554fdd-862d-5f45-883a-c77003467676",
+      "vehicle_ref": "b278f1b3-4a23-5b9b-b4d9-1ac4b84ccd27",
+      "role": "vehicle_collector",
+      "scopes": [
+        "events:append:odometer",
+        "timeline:read"
+      ],
+      "binding_method": "demo_vehicle_binding",
+      "credential": null
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "ae826706-796f-557a-928b-33177bb19cc4",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "principal_id": "c499be53-1f85-51ed-8854-cc1655e7b4a4",
+      "source_kind": "simulated_device",
+      "environment": "simulation",
+      "source_signed": false
+    },
+    {
+      "source_ref": "4132d2f8-f55c-529e-8571-0b4c77fb47db",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "principal_id": "a9c11b9c-0039-5bee-a6a9-7919c0a14ff7",
+      "source_kind": "simulated_workshop",
+      "environment": "simulation",
+      "source_signed": false
+    },
+    {
+      "source_ref": "53ae890b-55b4-5755-895b-c984c0e390ca",
+      "vehicle_ref": "3a853f31-a341-5ff2-a45d-94e47fe85c20",
+      "principal_id": "da068d97-c257-5d39-801a-5b1fbbfbcd01",
+      "source_kind": "simulated_device",
+      "environment": "simulation",
+      "source_signed": false
+    },
+    {
+      "source_ref": "c1b9eb85-f19a-59a8-8981-a4fe7495fab5",
+      "vehicle_ref": "b278f1b3-4a23-5b9b-b4d9-1ac4b84ccd27",
+      "principal_id": "ed554fdd-862d-5f45-883a-c77003467676",
+      "source_kind": "pleos_emulator",
+      "environment": "pleos_emulator",
+      "source_signed": false
+    }
+  ],
+  "events": [
+    {
+      "event_id": "febf5bc6-648d-52a4-9bed-0a9e328a244d",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "odometer.observed",
+      "occurred_at": "2026-04-30T03:00:00Z",
+      "observed_at": "2026-04-30T03:00:00Z",
+      "received_at": "2026-04-30T03:00:00Z",
+      "server_seq": 1,
+      "payload_version": 1,
+      "payload": {
+        "value": 28000,
+        "unit": "km",
+        "time_quality": "known"
+      },
+      "source_ref": "ae826706-796f-557a-928b-33177bb19cc4",
+      "environment": "simulation",
+      "collection_scope": [
+        "odometer"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "938e7d22-44c1-5d16-8d9c-126a36721d42",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "maintenance.completed",
+      "occurred_at": "2026-05-19T03:00:00Z",
+      "observed_at": "2026-05-19T03:00:00Z",
+      "received_at": "2026-05-19T03:00:00Z",
+      "server_seq": 2,
+      "payload_version": 1,
+      "payload": {
+        "task_code": "demo-tire-rotation"
+      },
+      "source_ref": "4132d2f8-f55c-529e-8571-0b4c77fb47db",
+      "environment": "simulation",
+      "collection_scope": [
+        "maintenance"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "ced8e53c-bd8b-5e8f-999e-986fc182f395",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "odometer.observed",
+      "occurred_at": "2026-05-19T03:00:00Z",
+      "observed_at": "2026-05-19T03:00:00Z",
+      "received_at": "2026-05-19T03:00:00Z",
+      "server_seq": 3,
+      "payload_version": 1,
+      "payload": {
+        "value": 30100,
+        "unit": "km",
+        "time_quality": "known"
+      },
+      "source_ref": "ae826706-796f-557a-928b-33177bb19cc4",
+      "environment": "simulation",
+      "collection_scope": [
+        "odometer"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "66fa193a-6a44-51f2-a5ab-2968e5665c41",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "maintenance.completed",
+      "occurred_at": "2026-07-19T03:00:00Z",
+      "observed_at": "2026-07-19T03:00:00Z",
+      "received_at": "2026-07-19T03:00:00Z",
+      "server_seq": 4,
+      "payload_version": 1,
+      "payload": {
+        "task_code": "demo-cabin-filter"
+      },
+      "source_ref": "4132d2f8-f55c-529e-8571-0b4c77fb47db",
+      "environment": "simulation",
+      "collection_scope": [
+        "maintenance"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "1c8af1e1-bee6-5f25-8aa8-a8415a700c16",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "odometer.observed",
+      "occurred_at": "2026-07-19T03:00:00Z",
+      "observed_at": "2026-07-19T03:00:00Z",
+      "received_at": "2026-07-19T03:00:00Z",
+      "server_seq": 5,
+      "payload_version": 1,
+      "payload": {
+        "value": 35200,
+        "unit": "km",
+        "time_quality": "known"
+      },
+      "source_ref": "ae826706-796f-557a-928b-33177bb19cc4",
+      "environment": "simulation",
+      "collection_scope": [
+        "odometer"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "15a0507c-a614-53a4-b937-71fa0ea1e3c6",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "maintenance.completed",
+      "occurred_at": "2026-09-12T03:00:00Z",
+      "observed_at": "2026-09-12T03:00:00Z",
+      "received_at": "2026-09-12T03:00:00Z",
+      "server_seq": 6,
+      "payload_version": 1,
+      "payload": {
+        "task_code": "demo-brake-inspection"
+      },
+      "source_ref": "4132d2f8-f55c-529e-8571-0b4c77fb47db",
+      "environment": "simulation",
+      "collection_scope": [
+        "maintenance"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "e077987c-e852-5483-8018-46d83168f4f3",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "odometer.observed",
+      "occurred_at": "2026-09-12T03:00:00Z",
+      "observed_at": "2026-09-12T03:00:00Z",
+      "received_at": "2026-09-12T03:00:00Z",
+      "server_seq": 7,
+      "payload_version": 1,
+      "payload": {
+        "value": 39800,
+        "unit": "km",
+        "time_quality": "known"
+      },
+      "source_ref": "ae826706-796f-557a-928b-33177bb19cc4",
+      "environment": "simulation",
+      "collection_scope": [
+        "odometer"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "4237863b-c09c-57e9-9e15-77d595d7c15c",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "odometer.observed",
+      "occurred_at": "2026-09-20T03:00:00Z",
+      "observed_at": "2026-09-20T03:00:00Z",
+      "received_at": "2026-09-20T03:00:00Z",
+      "server_seq": 8,
+      "payload_version": 1,
+      "payload": {
+        "value": 40500,
+        "unit": "km",
+        "time_quality": "known"
+      },
+      "source_ref": "ae826706-796f-557a-928b-33177bb19cc4",
+      "environment": "simulation",
+      "collection_scope": [
+        "odometer"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "341aad25-fb68-582c-b6f6-26ac49f11e9f",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "warning.observed",
+      "occurred_at": "2026-09-20T03:00:00Z",
+      "observed_at": "2026-09-20T03:00:00Z",
+      "received_at": "2026-09-20T03:00:00Z",
+      "server_seq": 9,
+      "payload_version": 1,
+      "payload": {
+        "code": "demo-tpms",
+        "state": "observed"
+      },
+      "source_ref": "ae826706-796f-557a-928b-33177bb19cc4",
+      "environment": "simulation",
+      "collection_scope": [
+        "warnings"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "c77f6386-5ef0-572c-a9d6-2738525d3c27",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "issue.resolved",
+      "occurred_at": "2026-09-21T03:00:00Z",
+      "observed_at": "2026-09-21T03:00:00Z",
+      "received_at": "2026-09-21T03:00:00Z",
+      "server_seq": 10,
+      "payload_version": 1,
+      "payload": {
+        "task_code": "demo-tire-repair",
+        "resolves_event_id": "341aad25-fb68-582c-b6f6-26ac49f11e9f"
+      },
+      "source_ref": "4132d2f8-f55c-529e-8571-0b4c77fb47db",
+      "environment": "simulation",
+      "collection_scope": [
+        "maintenance"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    },
+    {
+      "event_id": "ff4bd840-8fe3-5cff-8ba3-8352b3092b49",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "maintenance.corrected",
+      "occurred_at": "2026-09-10T03:00:00Z",
+      "observed_at": "2026-09-13T03:00:00Z",
+      "received_at": "2026-09-13T03:00:00Z",
+      "server_seq": 11,
+      "payload_version": 1,
+      "payload": {
+        "task_code": "demo-brake-inspection"
+      },
+      "source_ref": "4132d2f8-f55c-529e-8571-0b4c77fb47db",
+      "environment": "simulation",
+      "collection_scope": [
+        "maintenance"
+      ],
+      "source_signature": null,
+      "correction_of": "15a0507c-a614-53a4-b937-71fa0ea1e3c6"
+    },
+    {
+      "event_id": "b5d7d41b-d7e2-5b66-ba39-72db0bd5f847",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "event_type": "odometer.observed",
+      "occurred_at": "2026-10-27T03:00:00Z",
+      "observed_at": "2026-10-27T03:00:00Z",
+      "received_at": "2026-10-27T03:00:00Z",
+      "server_seq": 12,
+      "payload_version": 1,
+      "payload": {
+        "value": 42500,
+        "unit": "km",
+        "time_quality": "known"
+      },
+      "source_ref": "ae826706-796f-557a-928b-33177bb19cc4",
+      "environment": "simulation",
+      "collection_scope": [
+        "odometer"
+      ],
+      "source_signature": null,
+      "correction_of": null
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "3d21c4a2-0347-57ca-85a7-66864c05bb87",
+      "vehicle_ref": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+      "environment": "simulation",
+      "start": "2026-08-01T03:00:00Z",
+      "end": "2026-08-10T03:00:00Z",
+      "scope": [
+        "warnings"
+      ],
+      "reason": "unknown"
+    }
+  ],
+  "corrections": [
+    {
+      "original_event_id": "15a0507c-a614-53a4-b937-71fa0ea1e3c6",
+      "new_event_id": "ff4bd840-8fe3-5cff-8ba3-8352b3092b49",
+      "reason_code": "performed_date_corrected",
+      "authority_ref": "a9c11b9c-0039-5bee-a6a9-7919c0a14ff7"
+    }
+  ],
+  "assessments": [],
+  "personal_profiles": [],
+  "server_receipt_signatures": "not_generated",
+  "alias_to_uuid": {
+    "demo-collector-a": "c499be53-1f85-51ed-8854-cc1655e7b4a4",
+    "demo-collector-b": "da068d97-c257-5d39-801a-5b1fbbfbcd01",
+    "demo-emulator-collector": "ed554fdd-862d-5f45-883a-c77003467676",
+    "demo-emulator-source": "c1b9eb85-f19a-59a8-8981-a4fe7495fab5",
+    "demo-emulator-vehicle": "b278f1b3-4a23-5b9b-b4d9-1ac4b84ccd27",
+    "demo-gap-1": "3d21c4a2-0347-57ca-85a7-66864c05bb87",
+    "demo-issuer-a": "a9c11b9c-0039-5bee-a6a9-7919c0a14ff7",
+    "demo-job-brakes": "15a0507c-a614-53a4-b937-71fa0ea1e3c6",
+    "demo-job-brakes-corrected": "ff4bd840-8fe3-5cff-8ba3-8352b3092b49",
+    "demo-job-filter": "66fa193a-6a44-51f2-a5ab-2968e5665c41",
+    "demo-job-tire-repair": "c77f6386-5ef0-572c-a9d6-2738525d3c27",
+    "demo-job-tires": "938e7d22-44c1-5d16-8d9c-126a36721d42",
+    "demo-manager-a": "6e3a73fb-2a79-59c6-803b-b10c86f4098b",
+    "demo-odo-1": "febf5bc6-648d-52a4-9bed-0a9e328a244d",
+    "demo-odo-2": "ced8e53c-bd8b-5e8f-999e-986fc182f395",
+    "demo-odo-3": "1c8af1e1-bee6-5f25-8aa8-a8415a700c16",
+    "demo-odo-4": "e077987c-e852-5483-8018-46d83168f4f3",
+    "demo-odo-5": "4237863b-c09c-57e9-9e15-77d595d7c15c",
+    "demo-odo-6": "b5d7d41b-d7e2-5b66-ba39-72db0bd5f847",
+    "demo-source-app": "ae826706-796f-557a-928b-33177bb19cc4",
+    "demo-source-b": "53ae890b-55b4-5755-895b-c984c0e390ca",
+    "demo-source-workshop": "4132d2f8-f55c-529e-8571-0b4c77fb47db",
+    "demo-vehicle-a": "2e059ddc-5d2a-5c04-a910-2df71af20e9b",
+    "demo-vehicle-b": "3a853f31-a341-5ff2-a45d-94e47fe85c20",
+    "demo-warning-tire": "341aad25-fb68-582c-b6f6-26ac49f11e9f"
+  },
+  "import_rule": "seed-only; never submit received_at/server_seq/vehicle_ref through client event endpoint"
+}

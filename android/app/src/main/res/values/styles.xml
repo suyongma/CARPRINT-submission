@@ -1,0 +1,38 @@
+<resources>
+    <style name="Theme.Carprint" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="NavigationButton" parent="android:style/Widget.Material.Button.Borderless">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:textFontWeight">650</item>
+        <item name="android:background">@drawable/nav_background</item>
+        <item name="android:textColor">@color/nav_text</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <color name="background">#F5EFE6</color>
+    <color name="rail">#ECE2D6</color>
+    <color name="surface">#F5EFE6</color>
+    <color name="surface_elevated">#F8F2E9</color>
+    <color name="stroke">#CABAA9</color>
+    <color name="text_primary">#212B32</color>
+    <color name="text_secondary">#5E5349</color>
+    <color name="accent">#A63524</color>
+    <color name="warning">#784810</color>
+    <color name="on_accent">#FFFAF2</color>
+    <color name="cover_mark">#EE795D</color>
+    <color name="card_surface">#FFF9F1</color>
+    <color name="card_outline">#E4D8CA</color>
+    <color name="secondary_action">#EEE2D5</color>
+</resources>

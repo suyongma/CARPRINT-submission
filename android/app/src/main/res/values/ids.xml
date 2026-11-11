@@ -1,0 +1,5 @@
+<resources>
+    <item name="distance_status" type="id" />
+    <item name="refresh_distance" type="id" />
+    <item name="distance_source" type="id" />
+</resources>

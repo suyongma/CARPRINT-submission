@@ -1,0 +1,19 @@
+{
+  "replacement": {
+    "event_id": "ff4bd840-8fe3-5cff-8ba3-8352b3092b49",
+    "event_type": "maintenance.corrected",
+    "occurred_at": "2026-09-10T03:00:00Z",
+    "observed_at": "2026-10-27T03:00:00Z",
+    "payload_version": 1,
+    "payload": {
+      "task_code": "demo-brake-inspection"
+    },
+    "source_ref": "4132d2f8-f55c-529e-8571-0b4c77fb47db",
+    "environment": "simulation",
+    "collection_scope": [
+      "maintenance"
+    ],
+    "source_signature": null
+  },
+  "reason_code": "performed_date_corrected"
+}

@@ -1,0 +1,32 @@
+{
+  "environment": "pleos_emulator",
+  "status": "plan_only_not_executed",
+  "minimum_emulator_version": "2.1.0",
+  "tool": "Pleos Connect Virtual Console",
+  "mode": "manual_only",
+  "documentation": "https://document.pleos.ai/en/docs/pleos-only/app-test-guide/virtual-console-guide",
+  "steps": [
+    {
+      "domain": "Motion",
+      "control": "Odometer",
+      "kilometers": 42500,
+      "app_action": "다시 읽기",
+      "expected": "수신 42500km · Pleos 에뮬레이터 출처"
+    },
+    {
+      "domain": "Motion",
+      "control": "Odometer",
+      "kilometers": 42510,
+      "app_action": "다시 읽기",
+      "expected": "새 수신 42510km"
+    },
+    {
+      "domain": "Motion",
+      "control": "Odometer",
+      "kilometers": 42500,
+      "app_action": "다시 읽기",
+      "expected": "감소 관측 · 향후 이상 검토용, 조작 확정 금지"
+    }
+  ],
+  "history_rule": "합성 이력 또는 합성 점수와 결합하지 않는다. 4단계 앱은 일회성 읽기이며 이상 탐지·저장은 아직 없다."
+}

@@ -1,0 +1,59 @@
+{
+  "full": {
+    "report_id": "a58f34a7-0dce-5e86-867a-81d0a54b14f8",
+    "environment": "simulation",
+    "kind": "full",
+    "vehicle_alias": "데모 차량 A",
+    "issued_at": "2026-10-27T03:01:00Z",
+    "data_cutoff_at": "2026-10-27T03:00:00Z",
+    "data_cutoff_seq": 12,
+    "expires_at": "2026-10-27T04:01:00Z",
+    "revoked_at": null,
+    "assessment": null,
+    "included_event_ids": [
+      "febf5bc6-648d-52a4-9bed-0a9e328a244d",
+      "938e7d22-44c1-5d16-8d9c-126a36721d42",
+      "ced8e53c-bd8b-5e8f-999e-986fc182f395",
+      "66fa193a-6a44-51f2-a5ab-2968e5665c41",
+      "1c8af1e1-bee6-5f25-8aa8-a8415a700c16",
+      "15a0507c-a614-53a4-b937-71fa0ea1e3c6",
+      "e077987c-e852-5483-8018-46d83168f4f3",
+      "4237863b-c09c-57e9-9e15-77d595d7c15c",
+      "341aad25-fb68-582c-b6f6-26ac49f11e9f",
+      "c77f6386-5ef0-572c-a9d6-2738525d3c27",
+      "ff4bd840-8fe3-5cff-8ba3-8352b3092b49",
+      "b5d7d41b-d7e2-5b66-ba39-72db0bd5f847"
+    ],
+    "gap_ids": [
+      "3d21c4a2-0347-57ca-85a7-66864c05bb87"
+    ],
+    "correction_event_ids": [
+      "ff4bd840-8fe3-5cff-8ba3-8352b3092b49"
+    ],
+    "scope_notice": "설정된 기간의 전체 기록 · 합성 시연",
+    "share_url": null,
+    "publication_state": "not_issued_design_only"
+  },
+  "partial": {
+    "report_id": "a2c9d32a-93c3-5f5a-b4c5-d5b6c8bfa7a3",
+    "environment": "simulation",
+    "kind": "partial",
+    "vehicle_alias": "데모 차량 A",
+    "issued_at": "2026-10-27T03:01:00Z",
+    "data_cutoff_at": "2026-10-27T03:00:00Z",
+    "data_cutoff_seq": 12,
+    "expires_at": "2026-10-27T04:01:00Z",
+    "revoked_at": null,
+    "assessment": null,
+    "included_event_ids": [
+      "938e7d22-44c1-5d16-8d9c-126a36721d42"
+    ],
+    "gap_ids": [
+      "3d21c4a2-0347-57ca-85a7-66864c05bb87"
+    ],
+    "correction_event_ids": [],
+    "scope_notice": "일부 자료만 공개됨 · 종합 점수 없음",
+    "share_url": null,
+    "publication_state": "not_issued_design_only"
+  }
+}

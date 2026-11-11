@@ -1,0 +1,246 @@
+{
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "event_type": {
+      "enum": [
+        "odometer.observed",
+        "maintenance.completed",
+        "warning.observed",
+        "issue.resolved",
+        "maintenance.corrected"
+      ]
+    },
+    "occurred_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "payload_version": {
+      "const": 1
+    },
+    "payload": {
+      "type": "object"
+    },
+    "source_ref": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "environment": {
+      "enum": [
+        "simulation",
+        "pleos_emulator"
+      ]
+    },
+    "collection_scope": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "odometer",
+          "maintenance",
+          "warnings"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source_signature": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "event_id",
+    "event_type",
+    "occurred_at",
+    "observed_at",
+    "payload_version",
+    "payload",
+    "source_ref",
+    "environment",
+    "collection_scope",
+    "source_signature"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://carprint.example.invalid/contracts/stages-5-7/event-request.schema.json",
+  "title": "시연 환경 이벤트 요청 초안; 차량·수신시각·순번은 서버가 결정",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "odometer.observed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "number",
+                "minimum": 0
+              },
+              "unit": {
+                "const": "km"
+              },
+              "time_quality": {
+                "enum": [
+                  "known",
+                  "client_observed",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "unit",
+              "time_quality"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "maintenance.completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "task_code": {
+                "type": "string",
+                "enum": [
+                  "demo-tire-rotation",
+                  "demo-cabin-filter",
+                  "demo-brake-inspection",
+                  "demo-tire-repair"
+                ]
+              }
+            },
+            "required": [
+              "task_code"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "warning.observed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "const": "demo-tpms"
+              },
+              "state": {
+                "enum": [
+                  "observed",
+                  "cleared"
+                ]
+              }
+            },
+            "required": [
+              "code",
+              "state"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "issue.resolved"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "task_code": {
+                "type": "string",
+                "enum": [
+                  "demo-tire-rotation",
+                  "demo-cabin-filter",
+                  "demo-brake-inspection",
+                  "demo-tire-repair"
+                ]
+              },
+              "resolves_event_id": {
+                "type": "string",
+                "format": "uuid"
+              }
+            },
+            "required": [
+              "task_code",
+              "resolves_event_id"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "maintenance.corrected"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "task_code": {
+                "type": "string",
+                "enum": [
+                  "demo-tire-rotation",
+                  "demo-cabin-filter",
+                  "demo-brake-inspection",
+                  "demo-tire-repair"
+                ]
+              }
+            },
+            "required": [
+              "task_code"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  ]
+}

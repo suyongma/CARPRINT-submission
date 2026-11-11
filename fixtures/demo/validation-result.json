@@ -1,0 +1,96 @@
+{
+  "kind": "synthetic_fixture_consistency_only",
+  "scenario_count": 10,
+  "scenarios": [
+    {
+      "scenario_id": "care_95",
+      "passed": true,
+      "score": 95,
+      "vehicle_event_count": 11
+    },
+    {
+      "scenario_id": "fresh_install",
+      "passed": true,
+      "score": null,
+      "vehicle_event_count": 0
+    },
+    {
+      "scenario_id": "coverage_gap",
+      "passed": true,
+      "score": null,
+      "vehicle_event_count": 11
+    },
+    {
+      "scenario_id": "evidence_revoked",
+      "passed": true,
+      "score": null,
+      "vehicle_event_count": 11
+    },
+    {
+      "scenario_id": "corrected_record",
+      "passed": true,
+      "score": 100,
+      "vehicle_event_count": 12
+    },
+    {
+      "scenario_id": "preventive_only",
+      "passed": true,
+      "score": null,
+      "vehicle_event_count": 9
+    },
+    {
+      "scenario_id": "selective_link",
+      "passed": true,
+      "score": 95,
+      "vehicle_event_count": 11
+    },
+    {
+      "scenario_id": "session_end_offline",
+      "passed": true,
+      "score": 95,
+      "vehicle_event_count": 11
+    },
+    {
+      "scenario_id": "profile_conflict",
+      "passed": true,
+      "score": 95,
+      "vehicle_event_count": 11
+    },
+    {
+      "scenario_id": "expired_report",
+      "passed": true,
+      "score": 95,
+      "vehicle_event_count": 11
+    }
+  ],
+  "invalid_fixture_checks": [
+    {
+      "case": "private_field_in_vehicle_event",
+      "rejected": true
+    },
+    {
+      "case": "vehicle_binding",
+      "rejected": true
+    },
+    {
+      "case": "score_mismatch",
+      "rejected": true
+    },
+    {
+      "case": "partial_composite_score",
+      "rejected": true
+    },
+    {
+      "case": "environment",
+      "rejected": true
+    }
+  ],
+  "not_tested": [
+    "Android UI",
+    "SDK",
+    "Vehicle Virtual Console",
+    "DB",
+    "login provider",
+    "real vehicle control"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "type": "object",
+  "properties": {
+    "vehicle_ref": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "kind": {
+      "enum": [
+        "full",
+        "partial"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "to": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "selected_event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "selected_event_ids"
+      ],
+      "additionalProperties": false
+    },
+    "expires_in": {
+      "enum": [
+        3600,
+        86400,
+        604800
+      ]
+    }
+  },
+  "required": [
+    "vehicle_ref",
+    "kind",
+    "scope",
+    "expires_in"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "전체 범위 또는 일부 자료 발행 요청; 점수·비밀은 서버가 결정",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "full"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "scope": {
+            "properties": {
+              "selected_event_ids": {
+                "maxItems": 0,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "partial"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "scope": {
+            "properties": {
+              "selected_event_ids": {
+                "minItems": 1,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          }
+        }
+      }
+    }
+  ]
+}

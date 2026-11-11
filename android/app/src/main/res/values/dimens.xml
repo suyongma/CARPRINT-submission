@@ -1,0 +1,4 @@
+<resources>
+    <bool name="dashboard_columns">false</bool>
+    <dimen name="content_padding">24dp</dimen>
+</resources>

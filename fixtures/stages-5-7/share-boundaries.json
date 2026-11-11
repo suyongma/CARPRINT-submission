@@ -1,0 +1,53 @@
+{
+  "expires_at": "2026-10-27T04:01:00Z",
+  "cases": [
+    {
+      "case": "before_expiry",
+      "now": "2026-10-27T04:00:59Z",
+      "secret_valid": true,
+      "revoked": false,
+      "source_changed": false,
+      "status": 200
+    },
+    {
+      "case": "at_expiry",
+      "now": "2026-10-27T04:01:00Z",
+      "secret_valid": true,
+      "revoked": false,
+      "source_changed": false,
+      "status": 410
+    },
+    {
+      "case": "after_expiry",
+      "now": "2026-10-27T04:01:01Z",
+      "secret_valid": true,
+      "revoked": false,
+      "source_changed": false,
+      "status": 410
+    },
+    {
+      "case": "revoked",
+      "now": "2026-10-27T03:30:00Z",
+      "secret_valid": true,
+      "revoked": true,
+      "source_changed": false,
+      "status": 410
+    },
+    {
+      "case": "wrong_secret",
+      "now": "2026-10-27T03:30:00Z",
+      "secret_valid": false,
+      "revoked": false,
+      "source_changed": false,
+      "status": 404
+    },
+    {
+      "case": "changed_evidence",
+      "now": "2026-10-27T03:30:00Z",
+      "secret_valid": true,
+      "revoked": false,
+      "source_changed": true,
+      "status": 409
+    }
+  ]
+}

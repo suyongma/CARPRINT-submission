@@ -1,0 +1,44 @@
+{
+  "environment": "simulation",
+  "defaults": "all_optional_scopes_off",
+  "options": [
+    {
+      "id": "climate",
+      "label": "공조 선호",
+      "scope": "climate_preference.read",
+      "default_selected": false,
+      "available_in_fixture": true
+    },
+    {
+      "id": "volume",
+      "label": "공용 볼륨",
+      "scope": "volume_preference.read",
+      "default_selected": false,
+      "available_in_fixture": true
+    },
+    {
+      "id": "places",
+      "label": "목적지 별칭",
+      "scope": "destination_alias.read",
+      "default_selected": false,
+      "available_in_fixture": true,
+      "real_address_in_fixture": false
+    },
+    {
+      "id": "seat",
+      "label": "좌석 보정값",
+      "scope": "confirmed_seat_profile.read",
+      "default_selected": false,
+      "available_in_fixture": false,
+      "reason": "현재 차량에서 확인된 보정값 없음"
+    }
+  ],
+  "selection_example": {
+    "scenario_id": "selective_link",
+    "user_selected": [
+      "climate",
+      "volume"
+    ],
+    "automatic_vehicle_control": false
+  }
+}

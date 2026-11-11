@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="76dp" android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="24dp" android:paddingEnd="24dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_carprint" android:importantForAccessibility="no" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="@string/brand" android:textSize="22sp" android:letterSpacing="0.12" android:fontFamily="@font/pretendard_variable" android:textFontWeight="750" android:textColor="@color/text_primary" />
+    <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+    <TextView android:id="@+id/active_context" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="240dp" android:textSize="18sp" android:textColor="@color/accent" android:visibility="gone" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:maxWidth="440dp" android:text="@string/environment_notice" android:textSize="16sp" android:gravity="end" android:textColor="@color/text_secondary" />
+</LinearLayout>
+<ScrollView android:id="@+id/content_scroll" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:clipToPadding="false">
+    <LinearLayout android:id="@+id/screen_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/content_padding" />
+</ScrollView>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="@color/rail"><Button android:id="@+id/nav_vehicle" style="@style/NavigationButton" android:layout_width="0dp" android:layout_weight="1" android:layout_margin="4dp" android:text="@string/my_vehicle" />
+<Button android:id="@+id/nav_history" style="@style/NavigationButton" android:layout_width="0dp" android:layout_weight="1" android:layout_margin="4dp" android:text="@string/vehicle_history" />
+<Button android:id="@+id/nav_reports" style="@style/NavigationButton" android:layout_width="0dp" android:layout_weight="1" android:layout_margin="4dp" android:text="@string/reports" />
+<Button android:id="@+id/nav_space" style="@style/NavigationButton" android:layout_width="0dp" android:layout_weight="1" android:layout_margin="4dp" android:text="@string/my_space" /></LinearLayout>
+</LinearLayout>

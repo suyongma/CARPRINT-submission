@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "carprint-demo-api",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-19",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "placement": { "region": "aws:ap-southeast-1" },
+  "limits": { "cpu_ms": 500 },
+  "observability": { "enabled": false },
+  "rules": [
+    {
+      "type": "Text",
+      "globs": [
+        "**/report-web/index.html",
+        "**/report-web/viewer.js",
+        "**/report-web/viewer.css",
+      ],
+      "fallthrough": true,
+    },
+  ],
+}

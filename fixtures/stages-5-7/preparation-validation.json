@@ -1,0 +1,23 @@
+{
+  "kind": "preparation_consistency_only",
+  "status": "passed",
+  "vehicle_count": 3,
+  "principal_count": 5,
+  "event_count": 12,
+  "gap_count": 1,
+  "correction_count": 1,
+  "route_count": 9,
+  "share_boundary_examples_checked": 6,
+  "implementation_acceptance_cases": 34,
+  "implementation_cases_executed": 0,
+  "not_tested": [
+    "JSON Schema validator conformance",
+    "HTTP",
+    "PostgreSQL",
+    "DB transactions",
+    "Android outbox",
+    "real credentials",
+    "share issuance",
+    "browser behavior"
+  ]
+}

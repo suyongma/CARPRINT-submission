@@ -1,0 +1,61 @@
+{
+  "schema_version": "carprint.demo.catalog.v1",
+  "environment": "simulation",
+  "default_scenario": "care_95",
+  "default_theme": "system",
+  "preview_system_theme": "light",
+  "runtime_integration": "not_implemented",
+  "reset_policy": "replace_demo_namespace_only",
+  "scenarios": [
+    {
+      "id": "care_95",
+      "label": "관리 점수 95점",
+      "file": "scenarios/care_95.json"
+    },
+    {
+      "id": "fresh_install",
+      "label": "설치 직후 · 자료 부족",
+      "file": "scenarios/fresh_install.json"
+    },
+    {
+      "id": "coverage_gap",
+      "label": "필수 범위 공백 · 점수 보류",
+      "file": "scenarios/coverage_gap.json"
+    },
+    {
+      "id": "evidence_revoked",
+      "label": "평가 근거 검증 취소",
+      "file": "scenarios/evidence_revoked.json"
+    },
+    {
+      "id": "corrected_record",
+      "label": "수행일 정정 · 95→100",
+      "file": "scenarios/corrected_record.json"
+    },
+    {
+      "id": "preventive_only",
+      "label": "예방 관리만 있음 · 종합 보류",
+      "file": "scenarios/preventive_only.json"
+    },
+    {
+      "id": "selective_link",
+      "label": "공조·볼륨만 연결 · 일부 결과 확인",
+      "file": "scenarios/selective_link.json"
+    },
+    {
+      "id": "session_end_offline",
+      "label": "하차 정리 · 원격 취소 대기",
+      "file": "scenarios/session_end_offline.json"
+    },
+    {
+      "id": "profile_conflict",
+      "label": "프로필 동시 수정 · 다시 미리보기",
+      "file": "scenarios/profile_conflict.json"
+    },
+    {
+      "id": "expired_report",
+      "label": "공유 리포트 만료",
+      "file": "scenarios/expired_report.json"
+    }
+  ]
+}

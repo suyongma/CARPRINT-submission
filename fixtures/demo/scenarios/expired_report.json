@@ -1,0 +1,449 @@
+{
+  "schema_version": "carprint.demo.bundle.v1",
+  "environment": "simulation",
+  "scenario_id": "expired_report",
+  "label": "공유 리포트 만료",
+  "demo_now": "2026-11-03T03:00:00Z",
+  "clock_policy": "fixed_manual_steps",
+  "runtime_status": "fixture_only_not_loaded_into_app",
+  "vehicle": {
+    "vehicle_ref": "demo-vehicle-a",
+    "alias": "데모 차량 A",
+    "brand": null,
+    "model_spec_key": "demo-spec-a",
+    "identity_level": "simulation"
+  },
+  "sources": [
+    {
+      "source_ref": "demo-source-app",
+      "source_kind": "vehicle_app_observation",
+      "source_signed": false,
+      "verification_status": "simulated_approved_observation"
+    },
+    {
+      "source_ref": "demo-source-workshop",
+      "source_kind": "verified_shop",
+      "source_signed": false,
+      "verification_status": "simulated_verified"
+    }
+  ],
+  "vehicle_events": [
+    {
+      "event_id": "demo-odo-1",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "odometer_observed",
+      "occurred_at": "2026-04-30T03:00:00Z",
+      "received_at": "2026-04-30T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "kilometers": 28000,
+        "unit": "km"
+      },
+      "source_ref": "demo-source-app",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-job-tires",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "maintenance_completed",
+      "occurred_at": "2026-05-19T03:00:00Z",
+      "received_at": "2026-05-19T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "task_code": "demo-tire-rotation",
+        "label": "타이어 위치 교환"
+      },
+      "source_ref": "demo-source-workshop",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-odo-2",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "odometer_observed",
+      "occurred_at": "2026-05-19T03:00:00Z",
+      "received_at": "2026-05-19T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "kilometers": 30100,
+        "unit": "km"
+      },
+      "source_ref": "demo-source-app",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-job-filter",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "maintenance_completed",
+      "occurred_at": "2026-07-19T03:00:00Z",
+      "received_at": "2026-07-19T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "task_code": "demo-cabin-filter",
+        "label": "실내 필터 교환"
+      },
+      "source_ref": "demo-source-workshop",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-odo-3",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "odometer_observed",
+      "occurred_at": "2026-07-19T03:00:00Z",
+      "received_at": "2026-07-19T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "kilometers": 35200,
+        "unit": "km"
+      },
+      "source_ref": "demo-source-app",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-job-brakes",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "maintenance_completed",
+      "occurred_at": "2026-09-12T03:00:00Z",
+      "received_at": "2026-09-12T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "task_code": "demo-brake-inspection",
+        "label": "브레이크 점검"
+      },
+      "source_ref": "demo-source-workshop",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-odo-4",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "odometer_observed",
+      "occurred_at": "2026-09-12T03:00:00Z",
+      "received_at": "2026-09-12T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "kilometers": 39800,
+        "unit": "km"
+      },
+      "source_ref": "demo-source-app",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-odo-5",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "odometer_observed",
+      "occurred_at": "2026-09-20T03:00:00Z",
+      "received_at": "2026-09-20T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "kilometers": 40500,
+        "unit": "km"
+      },
+      "source_ref": "demo-source-app",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-warning-tire",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "warning_observed",
+      "occurred_at": "2026-09-20T03:00:00Z",
+      "received_at": "2026-09-20T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "code": "demo-tpms",
+        "state": "observed"
+      },
+      "source_ref": "demo-source-app",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-job-tire-repair",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "issue_resolved",
+      "occurred_at": "2026-09-21T03:00:00Z",
+      "received_at": "2026-09-21T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "task_code": "demo-tire-repair",
+        "label": "타이어 경고 원인 점검·조치",
+        "resolves_event_id": "demo-warning-tire"
+      },
+      "source_ref": "demo-source-workshop",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    },
+    {
+      "event_id": "demo-odo-6",
+      "vehicle_ref": "demo-vehicle-a",
+      "event_type": "odometer_observed",
+      "occurred_at": "2026-10-27T03:00:00Z",
+      "received_at": "2026-10-27T03:00:00Z",
+      "payload_version": 1,
+      "payload": {
+        "kilometers": 42500,
+        "unit": "km"
+      },
+      "source_ref": "demo-source-app",
+      "environment": "simulation",
+      "source_signature": null,
+      "correction_of": null,
+      "record_status": "active"
+    }
+  ],
+  "collection_gaps": [],
+  "eligibility_inputs": {
+    "spec_known": true,
+    "rule_known": true,
+    "window_endpoints_known": true,
+    "all_required_inputs_known": true,
+    "sources_valid": true,
+    "unresolved_anomaly": false
+  },
+  "maintenance_rule": {
+    "rule_ref": "demo-maintenance-rule-v1",
+    "production": false,
+    "manufacturer_reference": null,
+    "basis": "가상 정비 기준: 제조사 기준 아님"
+  },
+  "opportunities": [
+    {
+      "opportunity_id": "demo-opp-tires",
+      "group": "preventive",
+      "label": "타이어 위치 교환",
+      "due_at": "2026-05-20T03:00:00Z",
+      "performed_at": "2026-05-19T03:00:00Z",
+      "q": 1,
+      "grace_days": null,
+      "grace_basis": null,
+      "evidence_event_id": "demo-job-tires",
+      "rule_ref": "demo-maintenance-rule-v1"
+    },
+    {
+      "opportunity_id": "demo-opp-filter",
+      "group": "preventive",
+      "label": "실내 필터 교환",
+      "due_at": "2026-07-20T03:00:00Z",
+      "performed_at": "2026-07-19T03:00:00Z",
+      "q": 1,
+      "grace_days": null,
+      "grace_basis": null,
+      "evidence_event_id": "demo-job-filter",
+      "rule_ref": "demo-maintenance-rule-v1"
+    },
+    {
+      "opportunity_id": "demo-opp-brakes",
+      "group": "preventive",
+      "label": "브레이크 점검",
+      "due_at": "2026-09-10T03:00:00Z",
+      "performed_at": "2026-09-12T03:00:00Z",
+      "q": 0.8,
+      "grace_days": 10,
+      "grace_basis": "synthetic-rule-only",
+      "evidence_event_id": "demo-job-brakes",
+      "rule_ref": "demo-maintenance-rule-v1"
+    },
+    {
+      "opportunity_id": "demo-opp-repair",
+      "group": "corrective",
+      "label": "타이어 경고 원인 조치",
+      "due_at": "2026-09-25T03:00:00Z",
+      "performed_at": "2026-09-21T03:00:00Z",
+      "q": 1,
+      "grace_days": null,
+      "grace_basis": null,
+      "evidence_event_id": "demo-job-tire-repair",
+      "rule_ref": "demo-maintenance-rule-v1"
+    }
+  ],
+  "assessments": [
+    {
+      "assessment_id": "demo-assessment-95",
+      "vehicle_ref": "demo-vehicle-a",
+      "environment": "simulation",
+      "rule_version": "D0.1",
+      "created_at": "2026-10-27T03:00:00Z",
+      "window_start": "2026-04-30T03:00:00Z",
+      "window_end": "2026-10-27T03:00:00Z",
+      "score": 95,
+      "eligibility": "eligible_limited_scope",
+      "evaluation_days": 180,
+      "observation_day_count": 7,
+      "opportunity_ids": [
+        "demo-opp-tires",
+        "demo-opp-filter",
+        "demo-opp-brakes",
+        "demo-opp-repair"
+      ],
+      "evidence_event_ids": [
+        "demo-job-tires",
+        "demo-job-filter",
+        "demo-job-brakes",
+        "demo-job-tire-repair"
+      ],
+      "coverage": {
+        "scopes": [
+          "maintenance_jobs",
+          "odometer_endpoints",
+          "corrective_observations"
+        ],
+        "continuous_vehicle_monitoring": false,
+        "required_gap_count": 0
+      },
+      "input_snapshot": {
+        "opportunities": [
+          {
+            "opportunity_id": "demo-opp-tires",
+            "group": "preventive",
+            "label": "타이어 위치 교환",
+            "due_at": "2026-05-20T03:00:00Z",
+            "performed_at": "2026-05-19T03:00:00Z",
+            "q": 1,
+            "grace_days": null,
+            "grace_basis": null,
+            "evidence_event_id": "demo-job-tires",
+            "rule_ref": "demo-maintenance-rule-v1"
+          },
+          {
+            "opportunity_id": "demo-opp-filter",
+            "group": "preventive",
+            "label": "실내 필터 교환",
+            "due_at": "2026-07-20T03:00:00Z",
+            "performed_at": "2026-07-19T03:00:00Z",
+            "q": 1,
+            "grace_days": null,
+            "grace_basis": null,
+            "evidence_event_id": "demo-job-filter",
+            "rule_ref": "demo-maintenance-rule-v1"
+          },
+          {
+            "opportunity_id": "demo-opp-brakes",
+            "group": "preventive",
+            "label": "브레이크 점검",
+            "due_at": "2026-09-10T03:00:00Z",
+            "performed_at": "2026-09-12T03:00:00Z",
+            "q": 0.8,
+            "grace_days": 10,
+            "grace_basis": "synthetic-rule-only",
+            "evidence_event_id": "demo-job-brakes",
+            "rule_ref": "demo-maintenance-rule-v1"
+          },
+          {
+            "opportunity_id": "demo-opp-repair",
+            "group": "corrective",
+            "label": "타이어 경고 원인 조치",
+            "due_at": "2026-09-25T03:00:00Z",
+            "performed_at": "2026-09-21T03:00:00Z",
+            "q": 1,
+            "grace_days": null,
+            "grace_basis": null,
+            "evidence_event_id": "demo-job-tire-repair",
+            "rule_ref": "demo-maintenance-rule-v1"
+          }
+        ],
+        "eligibility_inputs": {
+          "spec_known": true,
+          "rule_known": true,
+          "window_endpoints_known": true,
+          "all_required_inputs_known": true,
+          "sources_valid": true,
+          "unresolved_anomaly": false
+        },
+        "required_gap_count": 0
+      },
+      "validity": "current",
+      "supersedes_assessment_id": null,
+      "change_reason": null,
+      "label": "합성 시연 · 확인된 관리 범위에 한정 · 차량 안전/가격 평가 아님"
+    }
+  ],
+  "personal": {
+    "accounts": [],
+    "grants": [],
+    "seat_assignment": null,
+    "profile": null,
+    "application_results": [],
+    "session": {
+      "session_id": "demo-session-a",
+      "mode": "temporary",
+      "status": "not_linked",
+      "cleanup_state": "not_started"
+    }
+  },
+  "reports": [
+    {
+      "report_id": "demo-report-full",
+      "kind": "full",
+      "environment": "simulation",
+      "assessment_id": "demo-assessment-95",
+      "score": 95,
+      "issued_at": "2026-10-27T03:00:00Z",
+      "data_cutoff_at": "2026-10-27T03:00:00Z",
+      "expires_at": "2026-11-03T03:00:00Z",
+      "revoked_at": null,
+      "included_event_ids": [
+        "demo-odo-1",
+        "demo-job-tires",
+        "demo-odo-2",
+        "demo-job-filter",
+        "demo-odo-3",
+        "demo-job-brakes",
+        "demo-odo-4",
+        "demo-odo-5",
+        "demo-warning-tire",
+        "demo-job-tire-repair",
+        "demo-odo-6"
+      ],
+      "mandatory_gap_ids": [],
+      "display_state": "expired"
+    },
+    {
+      "report_id": "demo-report-partial",
+      "kind": "partial",
+      "environment": "simulation",
+      "assessment_id": null,
+      "score": null,
+      "issued_at": "2026-10-27T03:00:00Z",
+      "data_cutoff_at": "2026-10-27T03:00:00Z",
+      "expires_at": "2026-11-03T03:00:00Z",
+      "revoked_at": null,
+      "included_event_ids": [
+        "demo-job-tires"
+      ],
+      "mandatory_gap_ids": [],
+      "notice": "일부 자료만 공개됨",
+      "display_state": "expired"
+    }
+  ],
+  "ui": {
+    "theme": "system",
+    "system_theme_for_preview": "light",
+    "show_simulation_label": true
+  }
+}

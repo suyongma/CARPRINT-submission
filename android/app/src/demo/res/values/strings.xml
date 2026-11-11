@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CARPRINT Demo</string>
+    <string name="environment_notice">합성 데이터 시연 · 차량 미연결\n차량 제어 없음</string>
+</resources>

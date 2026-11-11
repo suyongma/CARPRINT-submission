@@ -1,0 +1,108 @@
+{
+  "schema_version": "carprint.demo.bundle.v1",
+  "environment": "simulation",
+  "scenario_id": "fresh_install",
+  "label": "설치 직후 · 자료 부족",
+  "demo_now": "2026-10-27T03:00:00Z",
+  "clock_policy": "fixed_manual_steps",
+  "runtime_status": "fixture_only_not_loaded_into_app",
+  "vehicle": {
+    "vehicle_ref": "demo-vehicle-a",
+    "alias": "데모 차량 A",
+    "brand": null,
+    "model_spec_key": "demo-spec-a",
+    "identity_level": "simulation"
+  },
+  "sources": [
+    {
+      "source_ref": "demo-source-app",
+      "source_kind": "vehicle_app_observation",
+      "source_signed": false,
+      "verification_status": "simulated_approved_observation"
+    },
+    {
+      "source_ref": "demo-source-workshop",
+      "source_kind": "verified_shop",
+      "source_signed": false,
+      "verification_status": "simulated_verified"
+    }
+  ],
+  "vehicle_events": [],
+  "collection_gaps": [],
+  "eligibility_inputs": {
+    "spec_known": true,
+    "rule_known": true,
+    "window_endpoints_known": false,
+    "all_required_inputs_known": false,
+    "sources_valid": true,
+    "unresolved_anomaly": false
+  },
+  "maintenance_rule": {
+    "rule_ref": "demo-maintenance-rule-v1",
+    "production": false,
+    "manufacturer_reference": null,
+    "basis": "가상 정비 기준: 제조사 기준 아님"
+  },
+  "opportunities": [],
+  "assessments": [
+    {
+      "assessment_id": "demo-assessment-empty",
+      "vehicle_ref": "demo-vehicle-a",
+      "environment": "simulation",
+      "rule_version": "D0.1",
+      "created_at": "2026-10-27T03:00:00Z",
+      "window_start": "2026-04-30T03:00:00Z",
+      "window_end": "2026-10-27T03:00:00Z",
+      "score": null,
+      "eligibility": "insufficient_history",
+      "evaluation_days": 180,
+      "observation_day_count": 0,
+      "opportunity_ids": [],
+      "evidence_event_ids": [],
+      "coverage": {
+        "scopes": [
+          "maintenance_jobs",
+          "odometer_endpoints",
+          "corrective_observations"
+        ],
+        "continuous_vehicle_monitoring": false,
+        "required_gap_count": 0
+      },
+      "input_snapshot": {
+        "opportunities": [],
+        "eligibility_inputs": {
+          "spec_known": true,
+          "rule_known": true,
+          "window_endpoints_known": false,
+          "all_required_inputs_known": false,
+          "sources_valid": true,
+          "unresolved_anomaly": false
+        },
+        "required_gap_count": 0
+      },
+      "validity": "current",
+      "supersedes_assessment_id": null,
+      "change_reason": null,
+      "label": "합성 시연 · 확인된 관리 범위에 한정 · 차량 안전/가격 평가 아님"
+    }
+  ],
+  "personal": {
+    "accounts": [],
+    "grants": [],
+    "seat_assignment": null,
+    "profile": null,
+    "application_results": [],
+    "session": {
+      "session_id": "demo-session-a",
+      "mode": "temporary",
+      "status": "not_linked",
+      "cleanup_state": "not_started"
+    }
+  },
+  "reports": [],
+  "ui": {
+    "theme": "system",
+    "system_theme_for_preview": "light",
+    "show_simulation_label": true
+  }
+}
